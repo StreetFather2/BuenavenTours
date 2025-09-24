@@ -1,199 +1,356 @@
-import React from 'react';
-import { MapPin, Ship, Music, Camera, Sun, Heart } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buenaventura Travel Guide</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              600: '#0d9488',
+              700: '#0f766e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .icon {
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-blue-50 to-emerald-50">
 
-const App = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-emerald-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Ship className="h-8 w-8 text-emerald-600" />
-              <h1 className="text-2xl font-bold text-gray-800">Travel Journal</h1>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-600 hover:text-emerald-600 font-medium">HOME</a>
-              <a href="#vocabulary" className="text-gray-600 hover:text-emerald-600 font-medium">VOCABULARY</a>
-              <a href="#article" className="text-gray-600 hover:text-emerald-600 font-medium">ARTICLE</a>
-            </div>
-          </nav>
-        </div>
-      </header>
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="text-emerald-600 text-xl">🌊</span>
+        <h1 class="text-xl md:text-2xl font-bold text-gray-800">Buenaventura Guide</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+        <a href="#home" class="hover:text-emerald-600">🏝 Home</a>
+        <a href="#experience" class="hover:text-emerald-600">✈ Experience</a>
+        <a href="#places" class="hover:text-emerald-600">📍 Places</a>
+        <a href="#activities" class="hover:text-emerald-600">🎯 Activities</a>
+        <a href="#tips" class="hover:text-emerald-600">💡 Tips</a>
+      </nav>
+    </div>
+  </header>
 
-      {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-emerald-600 to-blue-700 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-20">
-          <div className="text-center">
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-              DESTINATION:
-            </h2>
-            <h1 className="text-6xl md:text-8xl font-extrabold mb-8 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
-              BUENAVENTURA
-            </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-              Discover the authentic soul of Colombia's Pacific coast
-            </p>
-          </div>
-        </div>
-      </section>
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-gradient-to-r from-emerald-700 to-blue-800 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
+      <div class="mb-6">
+        <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-medium mb-4">
+          🏝 Where the Pacific Ocean meets Colombia's soul
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+        Discover <span class="text-yellow-300">Buenaventura</span>
+      </h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 opacity-90">
+        Experience the economic heart and cultural gateway of the Pacific Coast with its mesmerizing black sand beaches and luxury yacht adventures
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <span class="px-3 py-1 bg-emerald-600/30 rounded-full text-sm">#BuenaventuraTravel</span>
+        <span class="px-3 py-1 bg-emerald-600/30 rounded-full text-sm">#PacificCoast</span>
+        <span class="px-3 py-1 bg-emerald-600/30 rounded-full text-sm">#Colombia</span>
+        <span class="px-3 py-1 bg-emerald-600/30 rounded-full text-sm">#BlackSandBeaches</span>
+        <span class="px-3 py-1 bg-emerald-600/30 rounded-full text-sm">#YachtExperience</span>
+      </div>
+      <button class="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 px-8 rounded-full flex items-center mx-auto transition-all">
+        Start Your Journey
+        <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+      </button>
+    </div>
+  </section>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        {/* My Travel Experience */}
-        <section id="article" className="mb-20">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200">
-              MY TRAVEL EXPERIENCE
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <img 
-                  src="https://placehold.co/600x400/16a34a/ffffff?text=Black+Sand+Beach" 
-                  alt="Buenaventura Black Sand Beach"
-                  className="rounded-xl shadow-md w-full"
-                />
-              </div>
-              <div>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Visiting Buenaventura was one of the most authentic experiences I've ever had. This port city is not only the economic heart of Colombia but also the cultural gateway to the Pacific. I had the chance to enjoy its Black Sand beaches, take a yacht tour along the coast, and connect with traditions that make this place truly unique. From music to gastronomy, Buenaventura gave me memories I will never forget.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+  <!-- My Travel Experience -->
+  <section id="experience" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">✈ My Travel Experience</h2>
+        <p class="text-gray-600 text-lg">A personal journey through Colombia's Pacific treasure</p>
+      </div>
 
-        {/* Vocabulary Section */}
-        <section id="vocabulary" className="mb-20">
-          <div className="bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl shadow-lg p-8 md:p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              VOCABULARY
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                "port city", "yacht", "coast", "traditions", "seafood",
-                "cultural visit", "tour", "monuments", "music", "festivals"
-              ].map((word, index) => (
-                <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/30 transition-all duration-300">
-                  <span className="font-medium capitalize">{word}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Where to Go */}
-        <section className="mb-20">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <div className="flex items-center mb-6">
-              <MapPin className="h-8 w-8 text-emerald-600 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                WHERE TO GO
-              </h2>
-            </div>
-            <p className="text-gray-700 text-lg mb-8">
-              If you come to Buenaventura, you must explore its tourist islands: Juanchaco, Ladrilleros, La Bocana, Piangüita, and Playa Dorada. Each one offers different landscapes, from quiet beaches to vibrant local life. Don't miss the iconic Black Sand beach (Arena Negra), a natural wonder that represents the Pacific. Another must-see is the cargo dock, the most important in Colombia, which you can admire during a luxury yacht ride.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { name: "Juanchaco", image: "https://placehold.co/300x200/059669/ffffff?text=Juanchaco" },
-                { name: "Ladrilleros", image: "https://placehold.co/300x200/047857/ffffff?text=Ladrilleros" },
-                { name: "La Bocana", image: "https://placehold.co/300x200/16a34a/ffffff?text=La+Bocana" },
-                { name: "Piangüita", image: "https://placehold.co/300x200/15803d/ffffff?text=Piangüita" },
-                { name: "Playa Dorada", image: "https://placehold.co/300x200/166534/ffffff?text=Playa+Dorada" },
-                { name: "Arena Negra", image: "https://placehold.co/300x200/065f46/ffffff?text=Arena+Negra" },
-                { name: "Cargo Dock", image: "https://placehold.co/300x200/064e3b/ffffff?text=Cargo+Dock" }
-              ].map((place, index) => (
-                <div key={index} className="group">
-                  <img 
-                    src={place.image} 
-                    alt={place.name}
-                    className="rounded-lg shadow-md w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-800 mt-3 text-center">
-                    {place.name}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* What to Do */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-br from-blue-500 to-emerald-600 rounded-2xl shadow-lg p-8 md:p-12 text-white">
-            <div className="flex items-center mb-6">
-              <Ship className="h-8 w-8 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold">
-                WHAT TO DO
-              </h2>
-            </div>
-            <p className="text-lg mb-8 text-center max-w-4xl mx-auto">
-              Set off early in the morning for a yacht trip and enjoy the fresh Pacific breeze. You can try out the famous encocado de camarón (shrimp in coconut sauce), taste fresh seafood, and dance to live marimba music. At night, you could explore Buenaventura's nightlife, full of Pacific rhythms. If you love culture, you should also visit the House of Culture and join a local festival.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                "Yacht trip",
-                "Seafood (shrimp in coconut sauce)",
-                "Dance to marimba",
-                "Nightlife",
-                "Explore islands",
-                "Join local festival"
-              ].map((activity, index) => (
-                <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
-                  <div className="text-2xl mb-3">🎯</div>
-                  <p className="font-medium">{activity}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Travel Tips */}
-        <section className="mb-20">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <div className="flex items-center mb-6">
-              <Heart className="h-8 w-8 text-emerald-600 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                TRAVEL TIPS
-              </h2>
-            </div>
-            <p className="text-gray-700 text-lg mb-8">
-              You must bring sunscreen and comfortable clothes for the warm weather. Book your yacht ride in advance to secure the best experience. Don't forget your camera, because the sunsets on the Pacific coast are breathtaking. Most importantly, come with an open heart to connect with the people, their stories, and traditions—you'll leave wanting to come back.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4">
-              {[
-                { icon: Sun, text: "Sunscreen" },
-                { icon: "👕", text: "Comfortable clothes" },
-                { icon: "📅", text: "Book in advance" },
-                { icon: Camera, text: "Camera" },
-                { icon: "🌅", text: "Sunsets" },
-                { icon: Heart, text: "Open heart" }
-              ].map((tip, index) => (
-                <div key={index} className="bg-emerald-50 rounded-lg p-4 text-center">
-                  {typeof tip.icon === 'string' ? (
-                    <div className="text-2xl mb-2">{tip.icon}</div>
-                  ) : (
-                    <tip.icon className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
-                  )}
-                  <p className="text-sm font-medium text-gray-700">{tip.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-gray-300">
-            © 2005 Malkon Alvarez | Discover Buenaventura, one destination at a time
+      <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
+        <div class="space-y-6">
+          <p class="text-gray-700 text-lg leading-relaxed">
+            🌊 From the moment I stepped onto Buenaventura's unique black sand beaches, I knew this wasn't just another coastal destination. The contrast of the dark volcanic sand against the brilliant blue Pacific waters was absolutely breathtaking!
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            🛥 The yacht tour along the coast was pure magic. As we sailed past mangrove forests and pristine islands, our captain shared stories of local fishermen while marimba music played softly in the background. The monuments we passed told tales of Colombia's rich maritime history.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            🎵 During my visit, I was fortunate to experience a local festival where the entire community came alive with traditional music and dance. The sound of marimbas echoing through the streets, mixed with the aroma of fresh <span class="font-semibold">encocado de camarón</span>, created an atmosphere I'll never forget.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            🦐 Speaking of food—fellow travelers, you haven't lived until you've tasted authentic Pacific coast seafood! Every meal was a celebration of flavors, with coconut-infused dishes that perfectly captured the essence of this coastal paradise.
           </p>
         </div>
-      </footer>
-    </div>
-  );
-};
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://placehold.co/300x200/0d9488/ffffff?text=Black+Sand" alt="Black Sand Beach" class="rounded-lg shadow-md h-40 object-cover" />
+          <img src="https://placehold.co/300x200/059669/ffffff?text=Yacht+Tour" alt="Yacht Tour" class="rounded-lg shadow-md h-40 object-cover mt-8" />
+          <img src="https://placehold.co/300x200/16a34a/ffffff?text=Festival" alt="Local Festival" class="rounded-lg shadow-md h-40 object-cover" />
+          <img src="https://placehold.co/300x200/065f46/ffffff?text=Seafood" alt="Seafood" class="rounded-lg shadow-md h-40 object-cover mt-8" />
+        </div>
+      </div>
 
-export default App;
+      <div class="text-center">
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#TravelExperience</span>
+          <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#BuenaventuraCulture</span>
+          <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#YachtTour</span>
+          <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#MarimbaMusic</span>
+          <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#SeafoodLovers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where to Go -->
+  <section id="places" class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">📍 Where to Go</h2>
+        <p class="text-gray-600 text-lg">Discover the most spectacular destinations in Buenaventura</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="p-6">
+            <div class="text-3xl mb-3">🏝</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Juanchaco</h3>
+            <p class="text-gray-600 mb-4">A pristine beach paradise perfect for relaxation and water sports</p>
+            <button class="text-emerald-600 font-medium flex items-center hover:underline">
+              Explore More
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="p-6">
+            <div class="text-3xl mb-3">🌅</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Ladrilleros</h3>
+            <p class="text-gray-600 mb-4">Famous for its stunning sunsets and beachfront restaurants</p>
+            <button class="text-emerald-600 font-medium flex items-center hover:underline">
+              Explore More
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="p-6">
+            <div class="text-3xl mb-3">🌊</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">La Bocana</h3>
+            <p class="text-gray-600 mb-4">Where the river meets the ocean, creating unique ecosystems</p>
+            <button class="text-emerald-600 font-medium flex items-center hover:underline">
+              Explore More
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="p-6">
+            <div class="text-3xl mb-3">🌿</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Piangüita</h3>
+            <p class="text-gray-600 mb-4">Hidden gem island with untouched natural beauty</p>
+            <button class="text-emerald-600 font-medium flex items-center hover:underline">
+              Explore More
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="p-6">
+            <div class="text-3xl mb-3">🏄</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Playa Dorada</h3>
+            <p class="text-gray-600 mb-4">Golden beach with perfect waves for surfing enthusiasts</p>
+            <button class="text-emerald-600 font-medium flex items-center hover:underline">
+              Explore More
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="p-6">
+            <div class="text-3xl mb-3">🚢</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Arena Negra & Cargo Dock</h3>
+            <p class="text-gray-600 mb-4">Unique black sand beach next to Colombia's most important port</p>
+            <button class="text-emerald-600 font-medium flex items-center hover:underline">
+              Explore More
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-gray-700 mb-4">📸 Each destination offers unique photo opportunities and unforgettable experiences!</p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#Juanchaco</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#Ladrilleros</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#LaBocana</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#Pianguita</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#PlayaDorada</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#ArenaNegra</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow-sm">#CargoDock</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Do -->
+  <section id="activities" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">🎯 What to Do</h2>
+        <p class="text-gray-600 text-lg">Immerse yourself in the rhythm of the Pacific</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition-colors">
+          <div class="text-2xl mb-3">🛥</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Yacht Trip Along the Pacific Coast</h3>
+          <p class="text-gray-700">Set sail on crystal-clear waters and discover hidden coves, pristine islands, and breathtaking coastal views that can only be experienced from the sea.</p>
+        </div>
+        <div class="bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition-colors">
+          <div class="text-2xl mb-3">🦐</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Taste Encocado de Camarón</h3>
+          <p class="text-gray-700">Indulge in the signature dish of the Pacific coast—succulent shrimp swimming in rich coconut sauce, accompanied by fresh seafood delicacies.</p>
+        </div>
+        <div class="bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition-colors">
+          <div class="text-2xl mb-3">🎵</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Dance to Marimba Music</h3>
+          <p class="text-gray-700">Feel the infectious rhythms of traditional marimba music as local musicians create magical melodies that capture the essence of Pacific culture.</p>
+        </div>
+        <div class="bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition-colors">
+          <div class="text-2xl mb-3">🏝</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Explore the Islands</h3>
+          <p class="text-gray-700">Island-hop through an archipelago of natural wonders, each offering unique ecosystems, wildlife, and pristine beaches waiting to be discovered.</p>
+        </div>
+        <div class="bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition-colors">
+          <div class="text-2xl mb-3">🌃</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Experience Buenaventura Nightlife</h3>
+          <p class="text-gray-700">When the sun sets, the city comes alive with vibrant bars, live music venues, and beachfront parties that showcase the warmth of Colombian hospitality.</p>
+        </div>
+        <div class="bg-emerald-50 rounded-xl p-6 hover:bg-emerald-100 transition-colors">
+          <div class="text-2xl mb-3">🎭</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Join Local Festivals</h3>
+          <p class="text-gray-700">Participate in colorful cultural festivals and visit the House of Culture to experience authentic traditions, art, and the welcoming spirit of the Pacific people.</p>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-r from-emerald-100 to-blue-100 rounded-2xl p-6 max-w-4xl mx-auto">
+        <p class="text-gray-800 font-medium mb-4">🎊 Feel the rhythm of the Pacific while embracing cultural traditions that have been passed down through generations!</p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow">#YachtTrip</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow">#EncocadoDeCamaron</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow">#MarimbaMusic</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow">#PacificNightlife</span>
+          <span class="px-3 py-1 bg-white rounded-full text-sm shadow">#CulturalFestivals</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips -->
+  <section id="tips" class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">💡 Travel Tips</h2>
+        <p class="text-gray-600 text-lg">Essential advice for your perfect Buenaventura adventure</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <div class="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-3">☀️</div>
+          <h3 class="font-bold text-gray-800 mb-2">Sun Protection</h3>
+          <p class="text-sm text-gray-600">Pack plenty of sunscreen (SPF 50+)—the Pacific sun can be intense!</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-3">👕</div>
+          <h3 class="font-bold text-gray-800 mb-2">Comfortable Clothes</h3>
+          <p class="text-sm text-gray-600">Wear lightweight, breathable fabrics and comfortable walking shoes</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-3">📅</div>
+          <h3 class="font-bold text-gray-800 mb-2">Book in Advance</h3>
+          <p class="text-sm text-gray-600">Reserve yacht rides and restaurant tables ahead, especially during festivals</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-3">📸</div>
+          <h3 class="font-bold text-gray-800 mb-2">Capture Memories</h3>
+          <p class="text-sm text-gray-600">Bring a waterproof camera for underwater shots and beach photography</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-3">🌅</div>
+          <h3 class="font-bold text-gray-800 mb-2">Sunset Magic</h3>
+          <p class="text-sm text-gray-600">Never miss the Pacific sunsets—they're absolutely spectacular!</p>
+        </div>
+      </div>
+
+      <!-- Heartfelt Message -->
+      <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
+        <div class="flex items-start mb-4">
+          <span class="text-red-500 text-xl mr-3">❤</span>
+          <h3 class="text-xl font-bold text-gray-800">A Message from the Heart</h3>
+        </div>
+        <p class="text-gray-700 mb-4">
+          Dear fellow travelers, Buenaventura isn't just a destination—it's a soul-stirring experience. Come with an open heart, ready to connect with the incredible people who call this Pacific paradise home. Listen to their stories, dance to their rhythms, and taste the flavors that have been lovingly prepared for generations. You'll leave not just with photos, but with memories that will warm your heart forever.
+        </p>
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <span class="font-medium text-gray-800">❤ Open Heart</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-gray-100 rounded text-sm">#TravelTips</span>
+            <span class="px-2 py-1 bg-gray-100 rounded text-sm">#PacificSunsets</span>
+            <span class="px-2 py-1 bg-gray-100 rounded text-sm">#BuenaventuraAdventure</span>
+            <span class="px-2 py-1 bg-gray-100 rounded text-sm">#OpenHeartTravel</span>
+            <span class="px-2 py-1 bg-gray-100 rounded text-sm">#VisitColombia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="text-center mt-12">
+        <div class="bg-gradient-to-r from-emerald-600 to-blue-700 text-white rounded-2xl p-8 max-w-3xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">Ready for Your Buenaventura Adventure? 🌊</h3>
+          <p class="mb-6">Pack your bags, bring your sense of adventure, and prepare to fall in love with Colombia's Pacific treasure!</p>
+          <div class="flex justify-center space-x-4 text-2xl">
+            <span>🌊</span>
+            <span>🌴</span>
+            <span>⛵</span>
+          </div>
+        </div>
+        <p class="text-gray-500 mt-6 text-sm">© 2025 Buenaventura Travel Guide | Made with MALKON ALVAREZ</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Optional: Initialize Lucide icons if needed (not used here since we use emojis for simplicity)
+    lucide.createIcons();
+  </script>
+</body>
+</html>
